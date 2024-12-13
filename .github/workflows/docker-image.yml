@@ -55,7 +55,7 @@ jobs:
           git diff --name-only --exit-code
 
       - name: Commit and push
-        working-directory: webApp-Manifests
+        working-directory: kta-manifest-helm
         if: steps.update-image-tag.outcome == 'failure'
         run: |
           git config user.name github-actions[bot]
