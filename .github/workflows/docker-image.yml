@@ -51,7 +51,7 @@ jobs:
         working-directory: kta-manifest-helm
         continue-on-error: true
         run: |
-          yq -i '.image.tag = "${{ steps.meta.outputs.tags }}"' create-kta-app-values.yaml
+          yq -i '.image.tag = "${{ github.run_number }}"' create-kta-app-values.yaml
           git diff --name-only --exit-code
 
       - name: Commit and push
