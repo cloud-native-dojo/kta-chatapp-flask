@@ -44,7 +44,7 @@ jobs:
           repository: cloud-native-dojo/kta-manifest-helm
           ref: main
           token: ${{ secrets.PAT }}
-          path: webApp-Manifests
+          path: kta-manifest-helm
       
       - name: Update image tag
         id: update-image-tag
